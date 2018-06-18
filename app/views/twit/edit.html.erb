@@ -1,0 +1,13 @@
+<!--<form action="/twit/<%= @twit.id %>/update" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="text" name="content" value="<%= @twit.content %>">
+    <input type="submit" value="수정하기">
+</form>-->
+
+
+<div class="container">
+    <%= form_tag("/twit/#{@twit.id}/update") do %>
+        <%= text_area_tag(:content, @twit.content, size: "24x6") %>
+        <input type="submit" value="re_tweet">
+    <% end %>
+</div>

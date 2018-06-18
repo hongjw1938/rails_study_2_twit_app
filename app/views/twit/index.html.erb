@@ -1,0 +1,35 @@
+
+<!--<a class="btn btn-success" href="/twit/new">새로 작성하기</a>
+
+<table class="table">
+    <thead>
+        <th>내용</th>
+        <th>link</th>
+    </thead>
+    <tbody>
+        
+        <% @twits.reverse.each do |twit| %>
+        <tr>
+        <td>
+        <%= twit.content[0..10] %>... <small>(<%= twit.ip_address %>, <%= twit.region %></small>)
+        
+        </td>
+        <td>
+        <a class="btn btn-info" href="/twit/<%= twit.id %>" position="fixed" right="10px">보기</a>
+        </td>
+        </tr>
+        <% end %>
+        
+    </tbody>
+</table>  
+-->
+
+
+
+
+<div class="list-group">
+    <% @twits.each do |twit| %>
+        <%= link_to truncate(twit.content, length:13), "/twit/#{twit.id}", class: "list-group-item list-group-item-action" %>
+        <!-- <%= twit.created_at %> -->
+    <% end %>
+</div>

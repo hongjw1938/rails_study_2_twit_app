@@ -1,0 +1,8 @@
+<ul>
+    <li><%= @twit.content %>(<%= @twit.ip_address %>, <%= @twit.region %>)<br/>
+        <a class="btn btn-primary" href='/twit'>전체보기</a>
+        <a class="btn btn-success" href="/twit/<%= @twit.id %>/edit">수정</a>
+        <a class="btn btn-danger" href="/twit/<%= @twit.id %>/delete">삭제</a>
+    </li>
+</ul>
+
